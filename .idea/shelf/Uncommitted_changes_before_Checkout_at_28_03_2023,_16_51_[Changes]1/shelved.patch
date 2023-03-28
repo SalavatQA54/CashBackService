@@ -1,0 +1,22 @@
+Index: src/test/java/ru/netology/CashbackHackServiceTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ru.netology;\n\nimport org.testng.annotations.Test;\n\nimport static org.testng.Assert.*;\n\npublic class CashbackHackServiceTest {\n    CashbackHackService service = new CashbackHackService();\n\n\n    @Test\n    public void shouldCalculateIfAmountCorrect() {\n        int amount = 5700;\n        int actual = service.remain(amount);\n        int expected = 300;\n        assertEquals(actual,expected);\n    }\n\n    @Test\n    public void shouldCalculateIfAmountInCorrect() {\n        int amount = 5000;\n        int actual = service.remain(amount);\n        int expected = 1000;\n        assertEquals(actual,expected);\n    }\n\n    @Test\n    public void shouldCalculateIfAmountZero() {\n        int amount = 0;\n        int actual = service.remain(amount);\n        int expected = 1000;\n        assertEquals(actual,expected);\n    }\n\n    @Test\n    public void shouldCalculateIfAmount1000() {\n        int amount = 1000;\n        int actual = service.remain(amount);\n        int expected = 0;\n        assertEquals(actual,expected);\n    }\n}
+===================================================================
+diff --git a/src/test/java/ru/netology/CashbackHackServiceTest.java b/src/test/java/ru/netology/CashbackHackServiceTest.java
+--- a/src/test/java/ru/netology/CashbackHackServiceTest.java	
++++ b/src/test/java/ru/netology/CashbackHackServiceTest.java	
+@@ -2,12 +2,11 @@
+ 
+ import org.testng.annotations.Test;
+ 
+-import static org.testng.Assert.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
+ 
+ public class CashbackHackServiceTest {
+     CashbackHackService service = new CashbackHackService();
+ 
+-
+     @Test
+     public void shouldCalculateIfAmountCorrect() {
+         int amount = 5700;

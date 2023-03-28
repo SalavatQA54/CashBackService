@@ -1,0 +1,24 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    id 'java'\n}\nsourceCompatibility =\"11\"\n\ncompileJava.options.encoding=\"UTF-8\"\ncompileTestJava.options.encoding=\"UTF-8\"\n\ngroup 'ru.netology'\nversion '1.0-SNAPSHOT'\n\nrepositories {\n    mavenCentral()\n}\n\ndependencies {\n    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'\n    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'\n}\n\ntest {\n    useJUnitPlatform()\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -14,10 +14,9 @@
+ }
+ 
+ dependencies {
+-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
++    testImplementation 'junit:junit:4.13'
+ }
+ 
+ test {
+-    useJUnitPlatform()
++    useJUnit()
+ }
+\ No newline at end of file

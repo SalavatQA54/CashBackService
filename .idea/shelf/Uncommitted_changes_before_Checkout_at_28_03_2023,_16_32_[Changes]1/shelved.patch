@@ -1,0 +1,22 @@
+Index: src/test/java/ru/netology/CashbackHackServiceTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/ru/netology/CashbackHackServiceTest.java b/src/test/java/ru/netology/CashbackHackServiceTest.java
+new file mode 100644
+--- /dev/null	
++++ b/src/test/java/ru/netology/CashbackHackServiceTest.java	
+@@ -0,0 +1,11 @@
++package ru.netology;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++public class CashbackHackServiceTest {
++
++    @Test
++    public void remain() {
++    }
++}
+\ No newline at end of file
